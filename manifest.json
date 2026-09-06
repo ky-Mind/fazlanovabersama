@@ -1,0 +1,16 @@
+{
+  "short_name": "Fazlanova",
+  "name": "Peduli Abu Vulkanik - Fazlanova Generation",
+  "icons": [
+    {
+      "src": "fazlanova.png",
+      "type": "image/png",
+      "sizes": "192x192 512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#1a0a0a",
+  "theme_color": "#1a0a0a",
+  "display": "standalone"
+}

@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peduli Abu Vulkanik - Fazlanova Generation</title>
+
+    <!-- PWA & Favicon Icons -->
+    <link rel="icon" type="image/png" href="fazlanova.png">
+    <link rel="apple-touch-icon" href="fazlanova.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1a0a0a">
     
     <!-- Font Awesome untuk Ikon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -14,7 +20,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* ==================== BASE STYLE ==================== */
         * {
             margin: 0;
             padding: 0;
@@ -32,7 +37,6 @@
             padding: 20px;
         }
 
-        /* Container Poster Utama */
         .poster-container {
             width: 100%;
             max-width: 900px;
@@ -46,7 +50,6 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        /* ==================== HEADER SECTION ==================== */
         .header {
             display: flex;
             align-items: flex-start;
@@ -78,7 +81,6 @@
             text-transform: uppercase;
         }
 
-        /* Title Area */
         .title-section {
             margin-bottom: 20px;
         }
@@ -132,7 +134,6 @@
             font-weight: 300;
         }
 
-        /* ==================== CONTENT SECTION ==================== */
         .content-card {
             background-color: rgba(230, 228, 225, 0.95);
             border-radius: 20px;
@@ -164,7 +165,6 @@
             position: relative;
         }
 
-        /* Pembatas Garis Tengah untuk Desktop */
         .grid-container::before {
             content: '';
             position: absolute;
@@ -176,7 +176,6 @@
             transform: translateX(-50%);
         }
 
-        /* Item Petunjuk */
         .action-item {
             display: flex;
             align-items: flex-start;
@@ -236,7 +235,6 @@
             line-height: 1.4;
         }
 
-        /* Checklist Indicator */
         .check-badge {
             margin-left: auto;
             color: #2e7d32;
@@ -248,7 +246,6 @@
             display: block;
         }
 
-        /* ==================== FOOTER ==================== */
         .footer {
             margin-top: 30px;
             display: flex;
@@ -289,7 +286,6 @@
             color: #ff8a8a;
         }
 
-        /* Progress Tracker Interaktif */
         .progress-bar-container {
             margin-top: 15px;
             background: rgba(0,0,0,0.2);
@@ -306,7 +302,6 @@
             transition: width 0.4s ease;
         }
 
-        /* ==================== RESPONSIVE DESIGN ==================== */
         @media (max-width: 768px) {
             .poster-container {
                 padding: 25px 15px;
@@ -343,10 +338,8 @@
 
     <div class="poster-container">
         
-        <!-- Header -->
         <header class="header">
             <div class="logo-box">
-                <!-- Memakai URL Gambar Logo dari input -->
                 <img src="fazlanova.png" alt="Fazlanova Logo">
             </div>
             <div class="header-slogan">
@@ -354,7 +347,6 @@
             </div>
         </header>
 
-        <!-- Main Title -->
         <section class="title-section">
             <span class="main-title">Peduli</span>
             <span class="sub-title">Abu Vulkanik</span>
@@ -364,7 +356,6 @@
             </p>
         </section>
 
-        <!-- Content List Card -->
         <main class="content-card">
             <div class="card-header">
                 Hal yang Perlu Dilakukan:
@@ -372,7 +363,6 @@
 
             <div class="grid-container" id="actionGrid">
                 
-                <!-- Kolom Kiri -->
                 <div class="action-item" onclick="toggleItem(this)">
                     <div class="icon-box"><i class="fa-solid fa-head-side-mask"></i></div>
                     <div class="text-box">
@@ -382,7 +372,6 @@
                     <i class="fa-solid fa-circle-check check-badge"></i>
                 </div>
 
-                <!-- Kolom Kanan -->
                 <div class="action-item" onclick="toggleItem(this)">
                     <div class="icon-box"><i class="fa-solid fa-utensils"></i></div>
                     <div class="text-box">
@@ -457,7 +446,6 @@
 
             </div>
 
-            <!-- Interaktif: Progress Bar -->
             <div style="margin-top: 20px; font-size: 0.8rem; color: #666; text-align: right;">
                 <span id="progressText">0 dari 9 langkah dilakukan</span>
                 <div class="progress-bar-container">
@@ -466,7 +454,6 @@
             </div>
         </main>
 
-        <!-- Footer -->
         <footer class="footer">
             <div class="footer-quote">
                 <i class="fa-solid fa-leaf"></i>
@@ -480,7 +467,6 @@
 
     </div>
 
-    <!-- JavaScript Interaktif -->
     <script>
         function toggleItem(element) {
             element.classList.toggle('completed');
